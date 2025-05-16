@@ -309,12 +309,21 @@ host=github.com
 <p>Y presiona Enter dos veces.</p>
 <p>Esto eliminará de forma segura el token almacenado para GitHub, y Git volverá a pedir autenticación la próxima vez que intentes hacer git push.</p>
 <p class="image-container"><img src="img\\bf3b7c05a2d690bf.png"></p>
+<p>Para evitar dejar tus datos, puedes sobrescribirlos con valores genéricos o simplemente borrarlos.</p>
+<pre><code>git config --unset user.name
+git config --unset user.email
+</code></pre>
+<p>Si tú o alguien más usó el flag –global, los datos quedarán guardados en todo el sistema. Puedes eliminarlos así:</p>
+<pre><code>git config --global --unset user.name
+git config --global --unset user.email
+</code></pre>
+<p>Finalmente, cuando termines de trabajar en una computadora que no es de uso personal (como laboratorios, bibliotecas o equipos prestados), es altamente recomendable eliminar el repositorio que clonaste desde GitHub. Esta medida protege tu código y tus credenciales.</p>
 
 
       </google-codelab-step>
     
       <google-codelab-step label="Créditos" duration="1">
-        <p>###Instituto Kriete de Ingeniería y Ciencias, La Libertad, El Salvador.</p>
+        <h2 is-upgraded>Instituto Kriete de Ingeniería y Ciencias, La Libertad, El Salvador.</h2>
 <p><strong>Versión de este documento:</strong> Versión 1.00, 2025.</p>
 <table>
 <tr><td colspan="1" rowspan="1"><p><strong>Versión</strong></p>
