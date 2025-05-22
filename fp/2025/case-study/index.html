@@ -1,0 +1,361 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Definición de caso de estudio</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="case-study"
+                  title="Definición de caso de estudio"
+                  environment="web"
+                  feedback-link="mailto:erick.varela@keyinstitute.edu.sv">
+    
+      <google-codelab-step label="Introducción" duration="0">
+        <p class="image-container"><img src="img\\3bf339a37e25caa4.jpg"></p>
+<h2 is-upgraded>Objetivo</h2>
+<p>Desarrollar una solución informática en Python que resuelva un problema real en el entorno de Key Institute, fomentando tanto habilidades técnicas de programación como habilidades blandas: comunicación, trabajo en equipo y negociación.</p>
+<h2 is-upgraded>Requisitos del Proyecto</h2>
+<ul>
+<li>Trabajo en equipo</li>
+<li>Grupos 5 integrantes</li>
+<li>Roles definidos: líder, desarrollador, documentador, gerente de presupuesto (lleva las cuentas), coordinador técnico (decide cuándo pedir ayuda). Nota: cada estudiante tiene un rol definido, pero debe participar activamente en todas las actividades.</li>
+<li>El proyecto debe realizarse utilizando el lenguaje de Programación Python. El grupo es libre de elegir la plataforma de desarrollo (Colab, Anaconda, Visual Studio, Idle, etc.)</li>
+</ul>
+<h2 is-upgraded>El proyecto debe incluir al menos:</h2>
+<ul>
+<li>Entrada de datos del usuario.</li>
+<li>Procesamiento de datos (uso de estructuras como listas, diccionarios, funciones).</li>
+<li>Salida clara y organizada.</li>
+<li>Almacenamiento o persistencia simple de datos (basada en archivos de texto).</li>
+</ul>
+<h2 is-upgraded>Presentación final (Pitch de venta)</h2>
+<p>La perspectiva de la presentación final debe ser la venta de la idea (no solo describir la herramienta como tal), el pitch debe centrarse en el valor de la solución y su impacto en el contexto real de la universidad. Es decir, se debe convencer al &#34;cliente&#34; (profesor/staff de Key) de que su solución resuelve un problema real de manera efectiva, innovadora y original.</p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Metodología" duration="0">
+        <h2 is-upgraded>Economía simulada para gestión de proyectos</h2>
+<p>Porque en el mundo real, los proyectos exitosos no solo dependen del conocimiento técnico, sino de la capacidad para gestionar recursos, trabajar con otros, negociar y adaptarse, con este proyecto, no solo se espera que los estudiantes puedan desarrollar sus habilidades de programación resolviendo un problema real con impacto en el entorno de Key. También se busca desarrollar habilidades esenciales como gestión de recursos, trabajo en equipo, negociación y autonomía. Para ello, se trabajará bajo una dinámica de economía simulada. El objetivo es simular un entorno donde cada equipo debe gestionar un presupuesto virtual mientras desarrolla su proyecto. Las decisiones que tomen afectarán su capacidad de avanzar, recibir ayuda y alcanzar sus metas.</p>
+<aside class="special"><p> Cada equipo comienza con 100,000 créditos virtuales. Esta es su &#34;cuenta bancaria&#34; para todo el proyecto. Antes de empezar, deberán comprar su idea de negocio. </p>
+</aside>
+<h2 is-upgraded>Tabla de costos y bonos</h2>
+<table>
+<tr><td colspan="1" rowspan="1"><p>Categoría</p>
+</td><td colspan="1" rowspan="1"><p>Concepto</p>
+</td><td colspan="1" rowspan="1"><p>Descripción</p>
+</td><td colspan="1" rowspan="1"><p>Costo (en créditos)</p>
+</td><td colspan="1" rowspan="1"><p>Interesados</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>Costos Asociados al Proyecto</strong></p>
+</td><td colspan="1" rowspan="1"><p>Compra inicial del proyecto</p>
+</td><td colspan="1" rowspan="1"><p>Cada equipo debe comprar la idea de negocio</p>
+</td><td colspan="1" rowspan="1"><p>Variable, entre 30,000 y 55,000 créditos</p>
+</td><td colspan="1" rowspan="1"><p>Negociación entre profesor y grupo</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Cambio de proyecto</p>
+</td><td colspan="1" rowspan="1"><p>Si cambian de idea a mitad del curso.</p>
+</td><td colspan="1" rowspan="1"><p>10% del valor del proyecto anterior + precio del nuevo proyecto</p>
+</td><td colspan="1" rowspan="1"><p>Negociación entre profesor y grupo</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Funcionalidad extra</p>
+</td><td colspan="1" rowspan="1"><p>Añadir características no solicitadas a la solución.</p>
+</td><td colspan="1" rowspan="1"><p>Bono de 5,000 a 10,000 según complejidad por funcionalidad añadida</p>
+</td><td colspan="1" rowspan="1"><p>Negociación entre profesor y grupo</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Selección de idea comprada</p>
+</td><td colspan="1" rowspan="1"><p>Selección de idea que ha sido asignada previamente a otro equipo</p>
+</td><td colspan="1" rowspan="1"><p>Costo del proyecto + multa<br><strong>Multa:</strong> 5,000 + 10% del costo del proyecto.<br>El 50% de la multa será asignada al grupo dueño de la idea</p>
+</td><td colspan="1" rowspan="1"><p>Negociación entre profesor y grupo</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>Costos de Desarrollo</strong></p>
+</td><td colspan="1" rowspan="1"><p>Librerías o APIs externas</p>
+</td><td colspan="1" rowspan="1"><p>Uso de herramientas no vistas en clase.</p>
+</td><td colspan="1" rowspan="1"><p>5,000 por librería<br><strong>Multa:</strong> 10% del presupuesto + 3,000 por no informar</p>
+</td><td colspan="1" rowspan="1"><p>Negociación entre profesor y grupo</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Plugins prehechos</p>
+</td><td colspan="1" rowspan="1"><p>Componentes pre-fabricados con comportamiento complejo de Internet</p>
+</td><td colspan="1" rowspan="1"><p>5,000 por funcionalidad<br><strong>Multa:</strong> 10% del presupuesto + 3,000 por no informar</p>
+</td><td colspan="1" rowspan="1"><p>Negociación entre profesor y grupo</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Debugging premium</p>
+</td><td colspan="1" rowspan="1"><p>Ayuda del profesor para errores difíciles.</p>
+</td><td colspan="1" rowspan="1"><p>5,000–15,000 según el caso</p>
+</td><td colspan="1" rowspan="1"><p>Negociación entre profesor y grupo</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>Consultoría y Ayuda</strong></p>
+</td><td colspan="1" rowspan="1"><p>Consulta al profesor</p>
+</td><td colspan="1" rowspan="1"><p>Preguntas directas al profesor.</p>
+</td><td colspan="1" rowspan="1"><p>Primera: 2,500 / Siguientes: 5,000</p>
+</td><td colspan="1" rowspan="1"><p>Negociación entre profesor y grupo</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Ayuda entre pares</p>
+</td><td colspan="1" rowspan="1"><p>Un equipo puede vender conocimiento a otro.</p>
+</td><td colspan="1" rowspan="1"><p>1,000–2,000</p>
+</td><td colspan="1" rowspan="1"><p>Acuerdo entre equipos (informar al profesor)</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>Calidad de Vida</strong></p>
+</td><td colspan="1" rowspan="1"><p>Extensiones de tiempo</p>
+</td><td colspan="1" rowspan="1"><p>Compra de días extra para entregas.</p>
+</td><td colspan="1" rowspan="1"><p>5,000 por día</p>
+</td><td colspan="1" rowspan="1"><p>Acuerdo entre profesor y grupo</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Compra de pista o hint</p>
+</td><td colspan="1" rowspan="1"><p>Pista escrita por correo en lugar de explicación completa.</p>
+</td><td colspan="1" rowspan="1"><p>4,000</p>
+</td><td colspan="1" rowspan="1"><p>Negociación entre profesor y grupo</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>Infraestructura (Simulada)</strong></p>
+</td><td colspan="1" rowspan="1"><p>Entorno de trabajo</p>
+</td><td colspan="1" rowspan="1"><p>Espacio utilizado y servicios ofrecidos por Key</p>
+</td><td colspan="1" rowspan="1"><p>3,000 semanales por equipo</p>
+</td><td colspan="1" rowspan="1"><p>Descuento automático</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>Otros</strong></p>
+</td><td colspan="1" rowspan="1"><p>Impuestos</p>
+</td><td colspan="1" rowspan="1"><p>Descuento automático del saldo del equipo.</p>
+</td><td colspan="1" rowspan="1"><p>5% del saldo actual por semana</p>
+</td><td colspan="1" rowspan="1"><p>Descuento automático</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Penalidades por malas prácticas</p>
+</td><td colspan="1" rowspan="1"><p>Copia, mala documentación, desorganización, falta de ética</p>
+</td><td colspan="1" rowspan="1"><p>Multa del 15% del presupuesto</p>
+</td><td colspan="1" rowspan="1"><p>Descuento automático</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Bonos por buenas prácticas</p>
+</td><td colspan="1" rowspan="1"><p>Documentación clara, pruebas, ayuda a otros equipos</p>
+</td><td colspan="1" rowspan="1"><p>Bono de 10,000 al final del proyecto</p>
+</td><td colspan="1" rowspan="1"><p>Bono automático</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>Mercado de Recursos Compartidos</strong></p>
+</td><td colspan="1" rowspan="1"><p>Venta de código reusable</p>
+</td><td colspan="1" rowspan="1"><p>Funciones o módulos útiles ofrecidos a otros equipos</p>
+</td><td colspan="1" rowspan="1"><p>A negociar (revisado por el docente)</p>
+</td><td colspan="1" rowspan="1"><p>Acuerdo entre equipos (informar al profesor)</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Alquiler de &#34;expertos&#34;</p>
+</td><td colspan="1" rowspan="1"><p>Estudiantes avanzados contratados por otros grupos</p>
+</td><td colspan="1" rowspan="1"><p>500–2,000 por día</p>
+</td><td colspan="1" rowspan="1"><p>Acuerdo entre equipos (informar al profesor)</p>
+</td></tr>
+</table>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Lista de proyectos" duration="0">
+        <table>
+<tr><td colspan="1" rowspan="1"><p>Id</p>
+</td><td colspan="1" rowspan="1"><p>Proyecto</p>
+</td><td colspan="1" rowspan="1"><p>Descripción</p>
+</td><td colspan="1" rowspan="1"><p>Funciones mínimas esperadas</p>
+</td><td colspan="1" rowspan="1"><p>Precio de idea de negocio</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>1</p>
+</td><td colspan="1" rowspan="1"><p>Gestor de préstamos de recursos</p>
+</td><td colspan="1" rowspan="1"><p>Aplicación para registrar, gestionar y hacer seguimiento de préstamos de recursos en Key.</p>
+</td><td colspan="1" rowspan="1"><p>• Registro de usuarios • Catálogo de recursos  • Préstamo y devolución • Alertas de retraso • Historial de préstamos • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$20,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>2</p>
+</td><td colspan="1" rowspan="1"><p>Sistema de reporte de problemas en Key Institute</p>
+</td><td colspan="1" rowspan="1"><p>Plataforma para registrar y gestionar reportes de incidencias, sugerencias o problemas en Key.</p>
+</td><td colspan="1" rowspan="1"><p>• Registro de usuarios • Listado por prioridad • Gestión de casos • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$20,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>3</p>
+</td><td colspan="1" rowspan="1"><p>Gestor de presupuesto</p>
+</td><td colspan="1" rowspan="1"><p>App para que los estudiantes simulen y gestionen su presupuesto mensual.</p>
+</td><td colspan="1" rowspan="1"><p>• Ingreso de ingresos y gastos • Cálculo de saldo • Visualización del estado financiero • Reportes mensuales • Alertas de sobregasto • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$32,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>4</p>
+</td><td colspan="1" rowspan="1"><p>Sistema de reservas de espacios académicos</p>
+</td><td colspan="1" rowspan="1"><p>App para reservar espacios como bibliotecas o laboratorios.</p>
+</td><td colspan="1" rowspan="1"><p>• Visualización de espacios • Selección de día y hora • Registro de reservas • Validación de disponibilidad • Prevención de reservas duplicadas • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$34,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>5</p>
+</td><td colspan="1" rowspan="1"><p>Plataforma de feedback anónimo para tutores de Key</p>
+</td><td colspan="1" rowspan="1"><p>Aplicación para evaluar clases de manera constructiva y anónima.</p>
+</td><td colspan="1" rowspan="1"><p>• Selección de clase/docente • Escalas de valoración • Comentarios constructivos • Sistema de likes/dislikes • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$30,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>6</p>
+</td><td colspan="1" rowspan="1"><p>Asistente para registro de actividades extracurriculares</p>
+</td><td colspan="1" rowspan="1"><p>Bitácora digital para registrar experiencias extracurriculares.</p>
+</td><td colspan="1" rowspan="1"><p>• Clasificación por categoría • Duración • Comentarios personales • Visualización por línea de tiempo o tipo • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$31,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>7</p>
+</td><td colspan="1" rowspan="1"><p>Gestor de objetos perdidos</p>
+</td><td colspan="1" rowspan="1"><p>Plataforma para reportar y recuperar objetos extraviados.</p>
+</td><td colspan="1" rowspan="1"><p>• Registro de objetos encontrados • Reporte de objetos perdidos • Sistema de coincidencias • Confirmación de recuperación • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$30,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>8</p>
+</td><td colspan="1" rowspan="1"><p>Control de asistencia a actividades co-curriculares</p>
+</td><td colspan="1" rowspan="1"><p>App para registrar y gestionar la asistencia a actividades.</p>
+</td><td colspan="1" rowspan="1"><p>• Creación de actividades • Registro de participantes • Control de asistencia • Visualización de historial • Reportes de asistencia • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$27,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>9</p>
+</td><td colspan="1" rowspan="1"><p>Plataforma de compañeros tutores</p>
+</td><td colspan="1" rowspan="1"><p>Plataforma para conectar estudiantes que necesitan ayuda con estudiantes avanzados.</p>
+</td><td colspan="1" rowspan="1"><p>• Registro de usuarios • Perfil académico • Sistema de emparejamiento • Gestión de sesiones • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$30,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>10</p>
+</td><td colspan="1" rowspan="1"><p>Aplicación de incentivos para reciclaje responsable</p>
+</td><td colspan="1" rowspan="1"><p>App que gamifica el reciclaje mediante puntos y recompensas.</p>
+</td><td colspan="1" rowspan="1"><p>• Registro de reciclaje • Sistema de puntos • Canje de beneficios • Historial de actividades • Clasificación/ranking • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$33,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>11</p>
+</td><td colspan="1" rowspan="1"><p>Plataforma digital del menú de &#34;The Food Station&#34;</p>
+</td><td colspan="1" rowspan="1"><p>Plataforma para consultar el menú actualizado de la cafetería.</p>
+</td><td colspan="1" rowspan="1"><p>• Visualización del menú • Clasificación por tipo de dieta • Precios visibles • Filtro por alergias • Comentarios o calificaciones • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$29,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>12</p>
+</td><td colspan="1" rowspan="1"><p>Tablón de anuncios digital para la comunidad Key</p>
+</td><td colspan="1" rowspan="1"><p>Plataforma para compartir información relevante entre estudiantes.</p>
+</td><td colspan="1" rowspan="1"><p>• Publicación de anuncios • Categorías organizadas • Búsqueda y filtros • Anuncios destacados • Moderación básica • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$28,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>13</p>
+</td><td colspan="1" rowspan="1"><p>Gestor de torneos de videojuegos</p>
+</td><td colspan="1" rowspan="1"><p>App para organizar torneos de videojuegos en Key.</p>
+</td><td colspan="1" rowspan="1"><p>• Registro de jugadores/equipos • Emparejamientos automáticos • Registro de resultados • Visualización del progreso • Base de datos con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$26,000.00</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p>14</p>
+</td><td colspan="1" rowspan="1"><p>Proyecto propio</p>
+</td><td colspan="1" rowspan="1"><p>Iniciativa libre del estudiante, basada en una problemática real de Key.</p>
+</td><td colspan="1" rowspan="1"><p>• Mínimo 5 funcionalidades • Debe abordar una problemática no mencionada • Gestión de datos persistentes con archivo de texto</p>
+</td><td colspan="1" rowspan="1"><p>$0.00</p>
+</td></tr>
+</table>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Métrica de evaluación" duration="0">
+        <p>La métrica de evaluación es de tipo matricial con <strong>base 100 puntos</strong>, dividida en tres grandes áreas:</p>
+<ol type="1">
+<li>Desarrollo técnico del proyecto (50 puntos)</li>
+<li>Gestión de la economía simulada (25 puntos)</li>
+<li>Pitch de venta final (25 puntos)</li>
+</ol>
+<p>Cada criterio tiene niveles de desempeño con puntajes. Esto ayuda a una evaluación clara, justa y orientada al aprendizaje.</p>
+<h2 is-upgraded>Puntaje Total: /100</h2>
+<table>
+<tr><td colspan="1" rowspan="1"><p>Categoría</p>
+</td><td colspan="1" rowspan="1"><p>Criterio</p>
+</td><td colspan="1" rowspan="1"><p>Excelente (puntaje máximo)</p>
+</td><td colspan="1" rowspan="1"><p>Aceptable</p>
+</td><td colspan="1" rowspan="1"><p>Insuficiente</p>
+</td><td colspan="1" rowspan="1"><p>Puntos Máximos</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>1. Desarrollo técnico</strong></p>
+</td><td colspan="1" rowspan="1"><p>Funcionamiento del sistema</p>
+</td><td colspan="1" rowspan="1"><p>Sistema completamente funcional, sin errores críticos.</p>
+</td><td colspan="1" rowspan="1"><p>Sistema funcional con errores menores.</p>
+</td><td colspan="1" rowspan="1"><p>Sistema incompleto o con errores graves.</p>
+</td><td colspan="1" rowspan="1"><p>20</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Calidad del código</p>
+</td><td colspan="1" rowspan="1"><p>Código limpio, bien organizado, con comentarios y buenas prácticas.</p>
+</td><td colspan="1" rowspan="1"><p>Código entendible, algo desorganizado.</p>
+</td><td colspan="1" rowspan="1"><p>Código confuso, sin estructura ni comentarios.</p>
+</td><td colspan="1" rowspan="1"><p>10</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Complejidad técnica</p>
+</td><td colspan="1" rowspan="1"><p>Implementa lógica, estructuras y manejo de datos de forma creativa.</p>
+</td><td colspan="1" rowspan="1"><p>Usa lógica básica sin mayor desafío técnico.</p>
+</td><td colspan="1" rowspan="1"><p>Solo cumple mínimamente con requerimientos.</p>
+</td><td colspan="1" rowspan="1"><p>10</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Documentación y presentación del sistema</p>
+</td><td colspan="1" rowspan="1"><p>Incluye README, explicación de uso y estructura clara.</p>
+</td><td colspan="1" rowspan="1"><p>Documentación parcial o poco clara.</p>
+</td><td colspan="1" rowspan="1"><p>Sin documentación o incomprensible.</p>
+</td><td colspan="1" rowspan="1"><p>10</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>2. Economía Simulada</strong></p>
+</td><td colspan="1" rowspan="1"><p>Uso estratégico del presupuesto</p>
+</td><td colspan="1" rowspan="1"><p>Tomaron decisiones inteligentes (proyecto, consultas, ayudas, etc.).</p>
+</td><td colspan="1" rowspan="1"><p>Algunas decisiones estratégicas, pero con errores.</p>
+</td><td colspan="1" rowspan="1"><p>Uso aleatorio o sin justificación del presupuesto.</p>
+</td><td colspan="1" rowspan="1"><p>10</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Interacción en el mercado/ayuda a otros equipos</p>
+</td><td colspan="1" rowspan="1"><p>Participaron vendiendo ayuda o recursos de forma activa.</p>
+</td><td colspan="1" rowspan="1"><p>Participaron de forma ocasional o mínima.</p>
+</td><td colspan="1" rowspan="1"><p>No interactuaron con otros equipos.</p>
+</td><td colspan="1" rowspan="1"><p>15</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>3. Pitch de venta final</strong></p>
+</td><td colspan="1" rowspan="1"><p>Presentación del problema y propuesta de valor</p>
+</td><td colspan="1" rowspan="1"><p>Claramente definido y conectado con la realidad del campus.</p>
+</td><td colspan="1" rowspan="1"><p>Explicado, pero con poca fuerza o sin claridad.</p>
+</td><td colspan="1" rowspan="1"><p>Confuso o mal desarrollado.</p>
+</td><td colspan="1" rowspan="1"><p>5</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Demostración y beneficios clave del producto</p>
+</td><td colspan="1" rowspan="1"><p>Demo funcional y convincente. Explican claramente el impacto.</p>
+</td><td colspan="1" rowspan="1"><p>Demo funcional, pero poco convincente o mal explicada.</p>
+</td><td colspan="1" rowspan="1"><p>Sin demo clara o sin conexión con beneficios reales.</p>
+</td><td colspan="1" rowspan="1"><p>5</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Validación y evidencias (feedback, métricas, pruebas)</p>
+</td><td colspan="1" rowspan="1"><p>Muestran datos reales, quotes o pruebas que respaldan su solución.</p>
+</td><td colspan="1" rowspan="1"><p>Muestran evidencia parcial o débil.</p>
+</td><td colspan="1" rowspan="1"><p>No presentan ninguna evidencia.</p>
+</td><td colspan="1" rowspan="1"><p>5</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Claridad, conexión y llamado a la acción final</p>
+</td><td colspan="1" rowspan="1"><p>Presentación fluida, lenguaje persuasivo, cierre claro.</p>
+</td><td colspan="1" rowspan="1"><p>Presentación comprensible, pero sin gancho o cierre fuerte.</p>
+</td><td colspan="1" rowspan="1"><p>Presentación confusa o desconectada.</p>
+</td><td colspan="1" rowspan="1"><p>5</p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"></td><td colspan="1" rowspan="1"><p>Participación equitativa del equipo</p>
+</td><td colspan="1" rowspan="1"><p>Todos hablan y aportan valor claro.</p>
+</td><td colspan="1" rowspan="1"><p>Participación desigual o desbalanceada.</p>
+</td><td colspan="1" rowspan="1"><p>Uno o dos miembros dominan, otros no participan.</p>
+</td><td colspan="1" rowspan="1"><p>5</p>
+</td></tr>
+</table>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

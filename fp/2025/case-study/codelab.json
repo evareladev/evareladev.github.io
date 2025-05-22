@@ -1,0 +1,24 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2025-05-22T14:15:04-06:00",
+  "id": "case-study",
+  "duration": 0,
+  "title": "Definición de caso de estudio",
+  "summary": "Definición de proyecto",
+  "source": ".\\definicion.md",
+  "theme": "",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "programmingfundamentals"
+  ],
+  "tags": [
+    "python"
+  ],
+  "feedback": "mailto:erick.varela@keyinstitute.edu.sv",
+  "url": "case-study"
+}
