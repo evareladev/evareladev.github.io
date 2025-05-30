@@ -1,0 +1,293 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>Introducción al manejo de datos tabulares con NumPy</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/claat-public/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid=""
+                  id="study-guide-02"
+                  title="Introducción al manejo de datos tabulares con NumPy"
+                  environment="web"
+                  feedback-link="mailto:erick.varela@keyinstitute.edu.sv">
+    
+      <google-codelab-step label="Introducción a NumPy" duration="5">
+        <p class="image-container"><img src="img\\3bf339a37e25caa4.jpg"></p>
+<p>NumPy es una biblioteca de código abierto de Python diseñada para gestionar grandes matrices y arreglos multidimensionales de datos numéricos, así como para realizar operaciones matemáticas con estas estructuras. Fue creada por Travis Oliphant en 2005 y desde entonces se ha convertido en una parte integral del ecosistema de ciencia de datos de Python. NumPy utiliza estructuras llamadas arrays que permiten realizar operaciones matemáticas más rápidas y con menos código que usando listas tradicionales.</p>
+<h2 is-upgraded>1.2. Por qué es importante NumPy?</h2>
+<ul>
+<li><strong>Manejo eficiente de datos:</strong> NumPy proporciona una forma eficiente de almacenar y manipular datos, lo que lo hace ideal para tareas como la limpieza y el preprocesamiento de datos.</li>
+<li><strong>Velocidad:</strong> NumPy está escrito en C, lo que le otorga una ventaja significativa en velocidad sobre Python puro al realizar cálculos numéricos.</li>
+<li><strong>Operaciones con arreglos:</strong> NumPy ofrece una amplia gama de funciones matemáticas para realizar operaciones con arreglos, como la suma, la resta y la multiplicación elemento por elemento.</li>
+</ul>
+<p class="image-container"><img src="img\\4be70f9efe7d7e92.png"></p>
+<h2 is-upgraded>1.3. Introducción a NumPy</h2>
+<p>Para empezar a usar NumPy, primero debes instalarlo con el siguiente comando:</p>
+<pre><code language="language-python" class="language-python">pip install numpy
+</code></pre>
+<p>Si utilizas Google Colab no necesitas usar pip install numpy porque NumPy ya está preinstalado en el entorno de ejecución. Puedes importarlo directamente sin instalarlo.</p>
+<p>Crea un nuevo proyecto de Python y <strong>copia</strong> la siguiente instrucción para importar la libreria numpy:</p>
+<pre><code language="language-python" class="language-python">import numpy as np
+</code></pre>
+<h2 is-upgraded>1.4. Creación de matrices en NumPy</h2>
+<p>NumPy trabaja principalmente con matrices. Puedes crear matrices de varias maneras:</p>
+<ol type="1">
+<li>Crear una matriz a partir de una lista</li>
+</ol>
+<pre><code language="language-python" class="language-python">my_list = [1, 2, 3, 4, 5]
+arr = np.array(my_list)
+print(arr)
+</code></pre>
+<ol type="1" start="2">
+<li>Crear una matriz de ceros</li>
+</ol>
+<pre><code language="language-python" class="language-python">zeros = np.zeros(5)
+print(zeros)
+</code></pre>
+<ol type="1" start="3">
+<li>Crear una matriz de unos</li>
+</ol>
+<pre><code language="language-python" class="language-python">ones = np.ones(5)
+print(ones)
+</code></pre>
+<h2 is-upgraded>1.5. Operaciones con matrices</h2>
+<p>NumPy permite realizar una amplia gama de operaciones con matrices, como:</p>
+<h3 is-upgraded>1.5.1. Suma</h3>
+<pre><code language="language-python" class="language-python">arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+resultado = arr1 + arr2
+</code></pre>
+<h3 is-upgraded>1.5.2. Multiplicación</h3>
+<pre><code language="language-python" class="language-python">resultado = arr1 * arr2
+</code></pre>
+<h2 is-upgraded>1.6. Broadcasting</h2>
+<p>El Broadcasting permite realizar operaciones con matrices de diferentes formas sin modificarlas explícitamente. Simplifica el código y lo hace más conciso. Así funciona la difusión:</p>
+<h3 is-upgraded>1.6.1. Reglas de Broadcasting.</h3>
+<ul>
+<li>Si dos matrices tienen un número diferente de dimensiones, la forma de la matriz de menor dimensión se rellena con unos en el lado izquierdo.</li>
+<li>Si la forma de las dos matrices no coincide en ninguna dimensión, la matriz con forma igual a 1 en esa dimensión se estira para que coincida con la forma de la otra matriz. Si no se cumple ninguna de estas condiciones, NumPy genera un error &#34;ValueError&#34;.</li>
+</ul>
+<h3 is-upgraded>1.6.2. jemplos de Broadcasting</h3>
+<p><strong>Ejemplo 1: Broadcasting con un escalar</strong></p>
+<pre><code language="language-python" class="language-python">arr = np.array([1, 2, 3])
+result = arr + 5
+</code></pre>
+<p>En este ejemplo, NumPy difunde el escalar 5 para que coincida con la forma del array arr, lo que resulta en [6, 7, 8].</p>
+<p><strong>Ejemplo 2: Difusión de matrices unidimensionales y bidimensionales</strong>*</p>
+<pre><code language="language-python" class="language-python">arr1 = np.array([1, 2, 3])
+arr2 = np.array([[10], [20], [30]])
+result = arr1 + arr2
+</code></pre>
+<p>Aquí, NumPy difunde la matriz unidimensional arr1 para que coincida con la forma de la matriz bidimensional arr2, lo que resulta en una matriz bidimensional [[11, 12, 13], [21, 22, 23], [31, 32, 33]].</p>
+<p>El Broadcasting simplifica muchas operaciones, eliminando la necesidad de bucles explícitos o la remodelación de matrices.</p>
+<h2 is-upgraded>1.7. Técnicas avanzadas de NumPy</h2>
+<p>NumPy ofrece técnicas avanzadas para la manipulación eficiente de datos. Comprender estas técnicas puede mejorar significativamente la lógica de desarrollo sobretodo en áreas como la ciencia de datos e IA.</p>
+<h3 is-upgraded>1.7.1. Segmentación e indexación</h3>
+<p>NumPy proporciona potentes mecanismos para segmentar e indexar matrices, lo que le permite acceder fácilmente a elementos o secciones específicas de una matriz.</p>
+<p><strong>Ejemplo de segmentación básica:</strong></p>
+<pre><code language="language-python" class="language-python">arr = np.array([1, 2, 3, 4, 5])
+slice = arr[1:4]
+# Recupera los elementos 2, 3 y 4
+</code></pre>
+<pre><code language="language-python" class="language-python"># Indexación booleana
+arr = np.array([1, 2, 3, 4, 5])
+mask = arr &gt; 2
+result = arr[mask]
+# Recupera los elementos donde la condición es verdadera: [3, 4, 5]
+</code></pre>
+<p><strong>Indexación de matrices enteras:</strong></p>
+<pre><code language="language-python" class="language-python">arr = np.array([1, 2, 3, 4, 5])
+indices = np.array([0, 2, 4])
+result = arr[indices] 
+# Recupera los elementos en los índices especificados: [1, 3, 5]
+</code></pre>
+<h3 is-upgraded>1.7.2. Concatenación y división</h3>
+<p>NumPy permite concatenar y dividir matrices a lo largo de ejes específicos.</p>
+<pre><code language="language-python" class="language-python">#Concatenación
+arr1 = np.array([1, 2, 3])
+arr2 = np.array([4, 5, 6])
+concatenated = np.concatenate((arr1, arr2))
+
+#División
+arr = np.array([1, 2, 3, 4, 5, 6])
+split = np.split(arr, 3) # Divide la matriz en 3 partes iguales
+</code></pre>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Caso de Estudio: Consumo Energético" duration="5">
+        <p>En esta sección, se presenta el conjunto de datos base para el análisis. La matriz consumo contiene el consumo energético (en kWh) de 10 hogares a lo largo de una semana (7 días). Cada fila representa un hogar, y cada columna corresponde a un día de la semana. Estos datos permitirán realizar operaciones estadísticas y transformaciones para identificar patrones, como diferencias entre hogares o días de mayor consumo.</p>
+<p><strong>Copia</strong> en el proyecto python la variable consumo, que contiene un arreglo bidimensional con los datos.</p>
+<pre><code language="language-python" class="language-python">consumo = np.array([
+    [12.5, 13.2, 11.9, 14.0, 13.5, 15.0, 14.3],
+    [10.1, 10.5, 10.0, 11.2, 11.5, 12.0, 11.8],
+    [14.0, 14.2, 13.9, 15.5, 15.1, 16.0, 15.8],
+    [9.0, 9.2, 8.9, 9.5, 9.8, 10.0, 9.7],
+    [16.2, 16.5, 16.0, 17.1, 17.4, 18.0, 17.8],
+    [11.0, 11.3, 11.1, 12.0, 12.4, 12.8, 12.5],
+    [13.5, 13.8, 13.2, 14.1, 14.6, 15.0, 14.9],
+    [10.8, 11.0, 10.6, 11.5, 11.8, 12.2, 12.0],
+    [15.1, 15.5, 15.0, 16.0, 16.4, 17.0, 16.7],
+    [8.5, 8.7, 8.4, 9.0, 9.2, 9.5, 9.3],
+])
+</code></pre>
+<p>Como analogía para entender el conjunto de datos, imagina una tabla de Excel. Las filas son los hogares (10 en total) y las columnas son los días (7). Cada celda tiene un número que indica cuánta energía consumió ese hogar en ese día.</p>
+<p><strong>Ejemplo:</strong> El valor consumo[0, 0] = 12.5 significa que el primer hogar consumió 12.5 kWh el lunes.</p>
+<h2 is-upgraded>Exploración inicial de los datos</h2>
+<p>A continuación, revisaremos algunos aspectos exploratorios básicos de los datos utilizando NumPy. Esta etapa es fundamental, ya que nos ayudará a comprender la estructura, dimensiones y características generales del conjunto de datos antes de realizar análisis más avanzados. Verificaremos aspectos como la forma de la matriz (número de hogares y días), el tipo de datos almacenados (por ejemplo, si son números enteros o decimales), y cómo acceder a subconjuntos específicos, como el consumo de un hogar en particular o de todos los hogares en un día determinado. Esta exploración inicial nos permitirá asegurar que los datos están correctamente cargados y preparados para las operaciones estadísticas y transformaciones que realizaremos más adelante.</p>
+<p><strong>Escribe</strong> las siguientes instrucciones en el proyecto de Python:</p>
+<p class="image-container"><img src="img\\385b79741be63f6f.png"></p>
+<p>Explicación de las instrucciones anteriores:</p>
+<ul>
+<li>ndim: muestra cuántas dimensiones tiene la matriz. En este caso, 2 (filas y columnas).</li>
+<li>shape: indica el número de filas y columnas. (10, 7) significa 10 hogares y 7 días.</li>
+<li>dtype: muestra el tipo de datos. float64 son números con decimales.</li>
+<li>consumo[0]: devuelve toda la fila 0 (consumo del primer hogar durante la semana).</li>
+<li>consumo[:, 2]: El símbolo : significa &#34;todos los hogares&#34;, y el 2 es la tercera columna (miércoles, porque Python cuenta desde 0).</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Introducción al Análisis Estadístico" duration="10">
+        <p>En esta etapa, aplicaremos operaciones estadísticas fundamentales para extraer información valiosa de nuestros datos de consumo energético. Estas técnicas nos permitirán:</p>
+<ul>
+<li>Resumir el comportamiento del consumo (promedios, totales).</li>
+<li>Identificar patrones (días de mayor gasto, hogares con extremos de consumo).</li>
+<li>Medir la variabilidad (qué tan dispersos están los datos).</li>
+</ul>
+<p>Utilizaremos funciones de NumPy como mean(), sum(), min(), max() y std(), las cuales operan de manera eficiente sobre matrices. Aprenderemos a aplicarlas por ejes, axis=0 representan las columnas y axis=1, las filas, en otras palabras, axis=0 para días, axis=1 para hogares.</p>
+<h2 is-upgraded>¿Por qué es importante?</h2>
+<p>Estos cálculos son el primer paso para tomar decisiones basadas en datos, como:</p>
+<ul>
+<li>Optimizar recursos energéticos.</li>
+<li>Detectar anomalías, por ejemplo, hogares con consumos inusuales.</li>
+<li>Establecer comparaciones objetivas entre grupos.</li>
+</ul>
+<h2 is-upgraded>Calculo de promedio y sumas</h2>
+<p><strong>Escribe</strong> las siguientes instrucciones en el proyecto de Python:</p>
+<p class="image-container"><img src="img\\96f3fba537c9146a.png"></p>
+<p>Explicación:</p>
+<ul>
+<li>np.mean: calcula el promedio. el valor axis=1: promedia por fila (cada hogar). Resultado: un array con 10 valores (uno por hogar). Por otro lado, axis=0: promedia por columna (cada día). Resultado: un array con 7 valores (uno por día).</li>
+<li>np.sum: suma todos los valores de la matriz.</li>
+</ul>
+<h2 is-upgraded>Mínimos, Máximos y Desviación</h2>
+<p><strong>Escribe</strong> las siguientes instrucciones en el proyecto de Python:</p>
+<p class="image-container"><img src="img\\4d7bb776fc831f68.png"></p>
+<p>Conceptos clave:</p>
+<ul>
+<li>Máximos por hogar (axis=1): el valor más alto que alcanzó cada hogar en la semana.</li>
+<li>Mínimos por día (axis=0): el valor más bajo registrado entre todos los hogares en un día específico.</li>
+<li>Desviación estándar (np.std): mide cuánto varían los datos respecto al promedio. Un valor alto indica que hay hogares con consumos muy distintos.</li>
+</ul>
+<h2 is-upgraded>Comparación de Hogares</h2>
+<p><strong>Escribe</strong> las siguientes instrucciones en el proyecto de Python:</p>
+<p class="image-container"><img src="img\\95d144b8fad67e2e.png"></p>
+<p>Conceptos clave:</p>
+<ul>
+<li>np.sum(axis=1): Suma el consumo de cada hogar durante los 7 días.</li>
+<li>np.argmax y np.argmin: Encuentran la posición (índice) del hogar que consumió más y menos energía en la semana.</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Transformaciones y filtros" duration="10">
+        <p>En esta etapa, daremos un paso más allá en nuestro análisis aplicando transformaciones y filtros clave a los datos de consumo energético. Estas técnicas nos permitirán:</p>
+<ul>
+<li>Identificar patrones específicos, como hogares con consumos inusualmente altos.</li>
+<li>Estandarizar los datos a través de normalización para comparaciones más justas.</li>
+<li>Preparar la información para visualizaciones o modelos de IA.</li>
+</ul>
+<p>Dominar estos métodos es esencial para convertir datos crudos en información accionable, especialmente cuando trabajamos con escalas de medida diferentes o necesitamos segmentar grupos de interés</p>
+<h2 is-upgraded>Filtrando los hogares de Alto Consumo (&gt;100 kWh)</h2>
+<p><strong>Escribe</strong> las siguientes instrucciones en el proyecto de Python:</p>
+<p class="image-container"><img src="img\\529ca6fffe6141a9.png"></p>
+<p>Conceptos clave:</p>
+<ul>
+<li>consumo_total_hogar &gt; 100: Crea un array de True/False indicando qué hogares superan 100 kWh.</li>
+<li>np.where(altos)[0]: Devuelve los índices de los hogares que cumplen la condición.</li>
+</ul>
+<h2 is-upgraded>Normalización de datos</h2>
+<p>La normalización global es una técnica fundamental que nos permite reescalar todos nuestros valores de consumo energético a un rango común entre 0 y 1. Este proceso es particularmente útil cuando:</p>
+<ul>
+<li>Necesitamos comparar magnitudes diferentes al llevar todos los datos a la misma escala, podemos identificar patrones que serían difíciles de detectar con las magnitudes originales.</li>
+<li>Preparamos datos para algoritmos de machine learning, esto porque muchos modelos funcionan mejor cuando los datos están normalizados.</li>
+<li>Visualizamos tendencias con mayor claridad al eliminar las diferencias de escala, los gráficos muestran relaciones más puras entre variables.</li>
+</ul>
+<p>Esta transformación es especialmente valiosa cuando queremos analizar patrones de comportamiento relativo más que valores absolutos de consumo.</p>
+<p>Existen varios métodos de normalización de datos, pero hay dos que destacan sobre los demás, empezando por el método de Escalado Mín-Máx. Se basa en el principio de escalar los valores de una variable para que queden dentro de un intervalo especificado, normalmente entre 0 y 1. Esta técnica es especialmente útil cuando se desea conservar la relación lineal entre los valores originales. La formula para aplicar normalización MinMax es la siguiente:</p>
+<p class="image-container"><img src="img\\632abf4be758caf5.png"></p>
+<p><strong>Escribe</strong> las siguientes instrucciones en el proyecto de Python:</p>
+<p class="image-container"><img src="img\\28028d5278e10bd7.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Cuestionario de trabajo" duration="15">
+        <h2 is-upgraded>Instrucciones:</h2>
+<ul>
+<li>Responde cada pregunta escribiendo el código necesario para obtener la respuesta.</li>
+<li>Agrega también comentarios o respuestas escritas cuando se solicite explicación.</li>
+<li>No borres las secciones anteriores del archivo python desarrollado para esta guía de trabajo, simplemente agrega tus respuestas al final.</li>
+<li>Puedes auxiliarte de tu herramienta IA preferida, pero recuerda las buenas prácticas para su uso. Somos responsables de comprender el resultado.</li>
+</ul>
+<h2 is-upgraded>Cuestionario.</h2>
+<ul>
+<li><strong>1.</strong> ¿Cuál es el consumo del hogar 5 el viernes (día 5)?</li>
+<li><strong>2.</strong> Usando indexación, muestra el consumo de los últimos 3 hogares el domingo.</li>
+<li><strong>3.</strong> Calcula el promedio de consumo los fines de semana (sábado y domingo, columnas 5 y 6).</li>
+<li><strong>4.</strong> ¿Qué día de la semana tiene la mayor desviación estándar entre hogares? Explica qué indica esto.</li>
+<li><strong>5.</strong> Identifica los 3 hogares con menor consumo total durante la semana. Muestra sus índices y valores.</li>
+<li><strong>6.</strong>  Si el hogar 3 aumenta su consumo en un 10% cada día, ¿cuál sería su nuevo consumo total semanal?</li>
+</ul>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="Créditos" duration="1">
+        <h2 is-upgraded>Instituto Kriete de Ingeniería y Ciencias, La Libertad, El Salvador.</h2>
+<p><strong>Versión de este documento:</strong> Versión 1.00, 2025.</p>
+<table>
+<tr><td colspan="1" rowspan="1"><p><strong>Versión</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>Año</strong></p>
+</td><td colspan="1" rowspan="1"><p><strong>Autores</strong></p>
+</td></tr>
+<tr><td colspan="1" rowspan="1"><p><strong>1.00</strong></p>
+</td><td colspan="1" rowspan="1"><p>2025</p>
+</td><td colspan="1" rowspan="1"><p>Erick Varela Guzmán (erick.varela@keyinstitute.edu.sv)</p>
+</td></tr>
+</table>
+<p><img alt="license" src="img\\2d61b47ed7775e46.jpg"> This work is licensed under a <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.</p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/claat-public/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/prettify.js"></script>
+  <script src="https://storage.googleapis.com/claat-public/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>
